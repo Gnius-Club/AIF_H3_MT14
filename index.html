@@ -1,286 +1,441 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playbook — 3º Preparatoria — Misión M14: Integración: La Llamada desde el Frontend (Conexión Full-Stack)</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-S3-TM14</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1><span class="book-icon">📋</span> <strong>Playbook Misión M14: Integración: La Llamada desde el Frontend</strong></h1>
-    <div class="header-widgets">
-      <div class="timer-container">
-        <span id="timer">⏱️ 00:00</span>
-        <button id="startStop">Start</button>
-        <button id="reset">Reset</button>
-      </div>
-      <div class="theme-toggle">
-        <i class="fas fa-sun"></i>
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle-input">
-          <span class="slider round"></span>
-        </label>
-        <i class="fas fa-moon"></i>
-      </div>
-    </div>
-  </header>
-  <div class="main-container">
-    <aside class="activity-list">
-      <h2>Actividades</h2>
-      <ul>
-        <li><a href="#activity-0">📝</a></li>
-        <li><a href="#activity-1">1</a></li>
-        <li><a href="#activity-2">2</a></li>
-        <li><a href="#activity-3">3</a></li>
-        <li><a href="#activity-4">4</a></li>
-        <li><a href="#activity-5">5</a></li>
-      </ul>
-      <div class="sidebar-info">
-        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-      </div>
-    </aside>
-    <main class="content">
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-      <section class="activity-card" id="activity-0">
-        <h2 class="activity-title">📝 De un Vistazo: Misión M14: Integración: La Llamada desde el Frontend</h2>
-        <p class="activity-purpose">Resumen de objetivos, secuencia y entregables.</p>
-        <div class="overview-table-container">
-          <table>
-            <thead>
-              <tr>
-                <th style="width: 50%;">Objetivos, Secuencia y Entregable</th>
-                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <h3>Objetivos e “I Can”</h3>
-                  <ul>
-                    <li>Puedo explicar el mecanismo de comunicación entre frontend y backend usando `fetch`.</li>
-                    <li>Puedo implementar una llamada `fetch` con método POST para enviar datos a un endpoint de API.</li>
-                  </ul>
-                  <h3>Secuencia y tiempos</h3>
-                  <ol>
-                    <li>Saludo Interactivo con IA — 3 min</li>
-                    <li>“I Can” + Desafío — 5–7 min</li>
-                    <li>AI GYM — 10–12 min</li>
-                    <li>Brain Spark — 17–20 min</li>
-                    <li>GNIUS STORM — 5 min</li>
-                  </ol>
-                  <h3>Entregable del Micro-Proyecto</h3>
-                  <ul>
-                    <li>Fragmento de código JavaScript funcional que realiza una llamada `fetch` POST a un endpoint del backend.</li>
-                    <li>Un formulario HTML simple con JS asociado para capturar y enviar datos.</li>
-                    <li>Evidencia de la comunicación exitosa (ej. captura de DevTools).</li>
-                  </ul>
-                </td>
-                <td>
-                  <h3>Criterios de calidad</h3>
-                  <ul>
-                    <li>Conexión funcional y bidireccional entre frontend y backend.</li>
-                    <li>Uso correcto de la API `fetch` (método, headers, cuerpo de la petición).</li>
-                    <li>Manejo básico de respuestas y errores de la API.</li>
-                    <li>Claridad y modularidad del código JavaScript.</li>
-                    <li>Evidencia de la comunicación en DevTools (Network tab).</li>
-                  </ul>
-                  <h3>Materiales y preparación</h3>
-                  <ul>
-                    <li>Proyector e internet</li>
-                    <li>CodePen/JSFiddle o entorno de desarrollo local (VS Code)</li>
-                    <li>Navegador con DevTools (pestaña Network)</li>
-                    <li>Un endpoint de backend funcional (puede ser el de M13 o un servicio de prueba como JSONPlaceholder)</li>
-                    <li>Ejemplo mínimo de `fetch` POST listo para demostrar.</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-1">
-        <h2 class="activity-title">Saludo Interactivo con IA</h2>
-        <p class="activity-purpose">Enmarcar foco y activar a Xolo con perfil/intereses.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
-              <p class="step-instructions">Proyectar Diapositiva 2. Presenta el tema y su valor profesional (Conexión Full-Stack).</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Equipo: hoy abordaremos un momento crucial en el desarrollo de aplicaciones: la integración. Conectaremos el frontend, que es la interfaz con la que el usuario interactúa, con el backend, que es el cerebro lógico que procesa los datos. Nuestra meta es establecer esta comunicación bidireccional de manera funcional y robusta.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
-              <p class="step-instructions">Cada estudiante envía a Xolo: “Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Misión M14: Integración. Necesito foco en conexión full-stack.”</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas para la integración de sistemas.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-2">
-        <h2 class="activity-title">“I Can Statement” + Desafío</h2>
-        <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Presenta el reto</h3>
-              <p class="step-instructions">Proyectar Diapositiva 3. Describe el reto: "Establecer la comunicación inicial entre un frontend y un backend usando JavaScript `fetch`."</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">El reto es ser un "Integrador de Sistemas". Debemos lograr que nuestro frontend, el componente que crearon en M09, pueda "hablar" con el backend, la API que desarrollaron en M13. Evaluaremos la conexión funcional y la correcta implementación de la llamada.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
-              <p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1 “I Can” alineado al entregable.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Por ejemplo: “Puedo implementar una llamada `fetch` con método POST para enviar datos a un endpoint de API y verificar su recepción en el backend.”</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-3">
-        <h2 class="activity-title">AI GYM</h2>
-        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Marco del día</h3>
-              <p class="step-instructions">Proyectar Diapositiva 5. Introduce el marco: `fetch` de JavaScript para comunicación HTTP.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Hoy, Xolo nos anuncia un momento crucial: conectar los dos mundos. El frontend necesita llamar al backend. La función `fetch` de JavaScript es el "teléfono" para hacer esta llamada. Este marco es vital porque permite que nuestras aplicaciones sean dinámicas. Eviten errores comunes como URLs incorrectas, métodos HTTP equivocados o cuerpos de petición mal formados. Usen la pestaña Network de DevTools para validar sus llamadas.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Mini-demostración</h3>
-              <p class="step-instructions">Proyectar Diapositiva 6. Construye un ejemplo mínimo de `fetch` POST a un endpoint de prueba.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Observen cómo `fetch` se usa para enviar datos. Noten el método POST, los `headers` para indicar que enviamos JSON, y cómo `JSON.stringify` convierte nuestro objeto JavaScript en una cadena JSON. Verifiquen en la pestaña Network que la petición se envía con el método y cuerpo correctos.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 3 — Check rápido</h3>
-              <p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Pregunta 1: ¿Qué método HTTP usaríamos para enviar datos nuevos al servidor? Pregunta 2: ¿Qué herramienta del navegador nos permite ver las peticiones que hace nuestro frontend al backend?</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-4">
-        <h2 class="activity-title">Brain Spark</h2>
-        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Producción</h3>
-              <p class="step-instructions">Proyectar Diapositiva 8. Modifica el JS del frontend (de M09) para que, al hacer clic en un botón, se envíe una petición POST a un endpoint de tu API (de M13), enviando datos (ej. de un formulario) en el cuerpo de la petición. Tu rol es ser un "Integrador de Sistemas".</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">N/A</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Iteración</h3>
-              <p class="step-instructions">Proyectar Diapositiva 9. Añade manejo de errores básico a tu llamada `fetch` (ej. usando `.catch()` para errores de red o verificando `response.ok`).</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Antes de cerrar: valida que tu llamada `fetch` maneje posibles errores. ¿Qué pasa si el servidor no responde o si la respuesta es un error? Si no se cumple, ajusta y vuelve a probar.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 3 — Evidencia</h3>
-              <p class="step-instructions">Proyectar Diapositiva 10. Solicita evidencia: el fragmento de código JavaScript y una captura de pantalla de la pestaña Network de DevTools mostrando la petición POST exitosa (código 200 o 201).</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Entrega con nombre: M14_Integracion_[Equipo/Nombre]. Incluye el fragmento de código y la captura de DevTools como prueba de la comunicación.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-5">
-        <h2 class="activity-title">GNIUS STORM</h2>
-        <p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
-              <p class="step-instructions">2–3 personas/equipos muestran evidencia (30–45 s c/u): la llamada `fetch` y la captura de DevTools.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Enfoca tu presentación en la decisión clave de cómo estructuraste la llamada `fetch`, la evidencia de su éxito en DevTools y la justificación de por qué es importante esta conexión.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
-              <p class="step-instructions">Proyectar Diapositiva 11. Síntesis: 1 aprendizaje clave del marco, 1 criterio que más impactó, 1 siguiente paso aplicable (p. ej., completar endpoints, añadir test, abrir issue de deuda, publicar URL).</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Síntesis: El aprendizaje clave es que la comunicación entre sistemas es el corazón de una aplicación web moderna. Criterio clave: La visibilidad de la petición en DevTools es fundamental para el diagnóstico. Siguiente paso aplicado: Ahora que la comunicación básica está establecida, podemos empezar a enviar y recibir datos más complejos para construir funcionalidades completas.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
-  <script src="script.js"></script>
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 14 - 3o de Preparatoria</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar WebWave y JDoodle para implementar peticiones fetch (POST) y comprender la integración como un contrato y la trazabilidad de datos.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame cómo el frontend “habla” con el backend mediante fetch y qué elementos componen una petición: método (POST), headers, body y endpoint. Analicemos qué datos debo enviar desde un formulario, cómo serializarlos (JSON) y cómo verificar que la petición realmente salió (sin asumir). Guíame a escribir el fragmento de JS que conecta mi UI con un endpoint real del backend.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Integración como contrato: Es un acuerdo entre el frente de la página y el cerebro del servidor sobre qué datos se envían y cómo se reciben, asegurando que ambos hablen el mismo idioma.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar código JavaScript para enviar información desde un formulario web hacia un servidor externo.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes estructuras de datos en el cuerpo del mensaje (body) y observar cómo responde el servidor.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Computadora con acceso a internet (1 por estudiante)</label>
+                        <label><input type="checkbox"> Acceso a WebWave, JDoodle y GitHub</label> <label><input type="checkbox"> Acceso a ChatGPT, Gemini o Claude como apoyo</label>
+                        <label><input type="checkbox"> Consola de desarrollador del navegador activa</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con CÓDIGO (JavaScript) en WebWave y JDoodle</label>
+                        <label><input type="checkbox"> 📋 Para esta misión: Asegúrate de tener una cuenta activa en WebWave y un proyecto base listo.</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> No aplica hardware físico, pero recuerda mantener tus credenciales de GitHub y WebWave seguras y no compartir contraseñas.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre la comunicación frontend-backend mediante fetch (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si la petición fetch falla:</strong> Revisar que el endpoint (URL) sea correcto y que el servidor esté activo. Verificar en la consola del navegador (F12) si hay errores de CORS.</li> <li><strong>Si el JSON no se envía bien:</strong> Asegurarse de usar JSON.stringify() en el body y que el header 'Content-Type' sea 'application/json'.</li> <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
+            <div class="activity-card" id="activity-1">
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos una voz a sus páginas web para que hablen con el mundo.".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Integración Full-Stack con Fetch.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A conectar el diseño de su web con la lógica del servidor para que los datos fluyan de verdad.</p>
+                        <p><strong>Aplicación real:</strong> Los desarrolladores de aplicaciones como Instagram o Amazon usan esta tecnología para que cada vez que das clic en "comprar" o "like", la información llegue correctamente a sus bases de datos.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 2: A.I. GYM -->
+            <div class="activity-card" id="activity-2">
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo funciona una petición fetch y sus partes (POST, headers, body).</li>
+                            <li>Introduce el concepto de integración como un contrato de datos.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar fetch para enviar datos JSON.</li>
+                            <li>Aprender sobre la trazabilidad y responsabilidad al enviar información.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
+                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar fetch (POST) para conectar la UI con un servidor y entender la trazabilidad.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Hoy vamos a dar un paso gigante en su camino como desarrolladores. Vamos a construir el puente que une lo que el usuario ve con lo que el servidor procesa. Por favor, abran su chat con XOLO y simplemente salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre la comunicación entre frontend y backend usando 'fetch'. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Pregúntenle todo sobre cómo se envían los datos y por qué es importante hacerlo con orden. ¡Aprovechen al máximo a su mentor digital!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
+            <div class="activity-card" id="activity-3">
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los plataformas de desarrollo conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique la integración de datos con fetch.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para conectar un formulario con un endpoint.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Configurar el endpoint en JDoodle o WebWave y probar la conexión.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a integrar mi frontend con mi backend con Vibe Coding: define conmigo el botón/acción, qué datos recolecto (formulario mínimo) y a qué endpoint haré POST. Guíame a construir el fetch con body JSON y un “log de comunicación” básico. Ejecuta: pega el fragmento JS en mi frontend, realiza una prueba manual (clic) y registra qué datos enviaste y a qué ruta."</pre>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿La petición llega al servidor y recibes una respuesta exitosa (status 200)?</li>
+                            <li>¿Qué sucede si intentas enviar el formulario con campos vacíos o datos incorrectos?</li>
+                            <li>¿Funciona igual la petición si cambias el método de POST a GET?</li>
+                            <li>¿Cómo asegura el 'contrato de integración' que el frontend y el backend no se confundan al enviarse información?</li>
+                            <li>Si los datos son trazables, ¿por qué es nuestra responsabilidad enviar solo lo mínimo necesario?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Ya entendieron la teoría, ahora vamos a la práctica. Usaremos XOLO para idear un proyecto donde un formulario en su web envíe datos reales a un endpoint. Imaginen, por ejemplo, un sistema de registro para un evento o un buzón de sugerencias inteligente. Sigan el flujo: ideen con XOLO, definan el 'VIBE' de su comunicación, obtengan su código GCS, llévenlo a WebWave o JDoodle y experimenten. No olviden hacerse las preguntas de experimentación para ver si su 'puente' es sólido y si los datos fluyen como esperaban. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar el código de inmediato. ¡Manos a la obra, genios del código!</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya logré que mi formulario envíe datos con fetch. ¿Puedes enseñarme cómo manejar diferentes tipos de respuestas del servidor, como errores 404 o 500, para mostrar mensajes personalizados al usuario?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué datos y endpoints configuró bien en su integración.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué partes del proceso de envío de datos funcionaron mejor en tu integración? ¿Qué te sorprendió de la respuesta del servidor?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi integración conectó el formulario con el endpoint de forma exitosa. Me sorprendió que la trazabilidad de los datos fuera tan clara en la consola."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
